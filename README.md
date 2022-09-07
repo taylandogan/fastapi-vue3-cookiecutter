@@ -22,12 +22,8 @@ openssl rand -hex 32
 
 ### Input variables
 
-The generator (cookiecutter) will ask you for some data, you might want to have at hand before generating the project.
-
 The input variables, with their default values (some auto generated) are:
 
 * `project_name`: The name of the project
 * `project_slug`: The development friendly name of the project. By default, based on the project name
-
 * `secret_key`: Backend server secret key. Use the method above to generate it.
-* `backend_cors_origins`: Domains that are enabled for CORS.

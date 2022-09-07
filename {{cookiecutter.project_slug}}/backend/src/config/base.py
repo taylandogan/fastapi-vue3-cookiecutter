@@ -31,11 +31,16 @@ class Settings(BaseSettings):
     DATABASE_POOL_RECYCLE_TTL: int = 3600
     DATABASE_POOL_MAX_OVERFLOW: int = 1
 
-    SECRET_KEY: str = secrets.token_urlsafe(32)
+    SECRET_KEY: str = "{{cookiecutter.secret_key}}"
 
     # 60 minutes * 24 hours * 1 day = 1 day
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 60 * 24 * 1
-    CORS_ALLOWED_ORIGINS: List[AnyHttpUrl] = []
+    CORS_ALLOWED_ORIGINS: List[AnyHttpUrl] = [
+        "http://localhost",
+        "http://localhost:3000",
+        "http://localhost:8000",
+        "http://localhost:8080",
+    ]
 
     @validator("CORS_ALLOWED_ORIGINS", pre=True)
     def assemble_cors_origins(cls, v: Union[str, List[str]]) -> Union[List[str], str]:
