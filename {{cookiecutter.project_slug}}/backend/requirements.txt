@@ -1,0 +1,29 @@
+{% if cookiecutter.use_postgres == 'y' -%}
+alembic
+databases[postgresql]
+{%- endif %}
+fastapi
+{% if cookiecutter.use_postgres == 'y' -%}
+psycopg2-binary
+{%- endif %}
+pydantic
+pyjwt
+python-dotenv
+{% if cookiecutter.use_redis == 'y' -%}
+redis
+{%- endif %}
+{% if cookiecutter.use_postgres == 'y' -%}
+sqlalchemy
+{%- endif %}
+uvicorn[standard]
+
+# Code style
+mypy
+flake8
+flake8-bugbear
+black
+isort
+
+# Tests
+pytest-asyncio
+coverage[toml]

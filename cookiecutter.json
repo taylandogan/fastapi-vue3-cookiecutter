@@ -1,0 +1,15 @@
+{
+    "project_name": "My Project",
+    "project_slug": "{{ cookiecutter.project_name|lower|replace(' ', '-') }}",
+    "python_version": "python3.10",
+    "secret_key": "changethis",
+    "first_superuser": "admin@{{cookiecutter.domain_main}}",
+    "first_superuser_password": "changethis",
+    "backend_cors_origins": "[\"http://localhost\", \"http://localhost:8000\", \"http://localhost:3000\", \"http://localhost:8080\"]",
+    "postgres_password": "changethis",
+    "pgadmin_default_user": "{{cookiecutter.first_superuser}}",
+    "pgadmin_default_user_password": "{{cookiecutter.first_superuser_password}}",
+    "sentry_dsn": "",
+    "use_postgres": "y",
+    "use_redis": "y"
+}

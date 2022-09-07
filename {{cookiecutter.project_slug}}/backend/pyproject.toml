@@ -1,0 +1,33 @@
+[tool.black]
+line-length = 120
+target_version = ["py310"]
+
+[tool.isort]
+combine_as_imports = true
+default_section = "THIRDPARTY"
+from_first = false
+include_trailing_comma = true
+length_sort = false
+multi_line_output = 3
+order_by_type = true
+sections = ["FUTURE", "STDLIB", "THIRDPARTY", "FIRSTPARTY", "LOCALFOLDER"]
+use_parentheses = true
+line_length = 120
+force_grid_wrap = 0
+
+[tool.coverage.run]
+source = ["src"]
+relative_files = true
+branch = true
+omit = [
+	"tests/*",
+  "src/api/__main__.py",
+  "src/config/*",
+  "src/db/*",
+]
+
+[tool.pytest.ini_options]
+pythonpath = [
+  "src"
+]
+asyncio_mode = "auto"

@@ -1,0 +1,26 @@
+volumes:
+  postgres-data:
+
+services:
+  {% if cookiecutter.use_postgres == 'y' -%}
+  db:
+    container_name: db
+    image: postgres:14
+    volumes:
+      - ./config:/docker-entrypoint-initdb.d
+      - postgres-data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=${DATABASE_USERNAME}
+      - POSTGRES_PASSWORD=${DATABASE_PASSWORD}
+      - POSTGRES_DB=${DATABASE_NAME}
+    ports:
+     - ${DATABASE_PORT}:5432
+  {%- endif %}
+
+  {% if cookiecutter.use_redis == 'y' -%}
+  redis:
+    container_name: redis
+    image: redis:alpine
+    ports:
+      - 6379:6379
+  {%- endif %}
