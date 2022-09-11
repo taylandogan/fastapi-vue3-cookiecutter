@@ -4,5 +4,8 @@
     "python_version": "python3.10",
     "secret_key": "changethis",
     "use_postgres": "y",
-    "use_redis": "y"
+    "use_redis": "y",
+    "_copy_without_render": [
+        "*.vue"
+    ]
 }

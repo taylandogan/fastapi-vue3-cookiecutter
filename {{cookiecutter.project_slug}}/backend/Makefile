@@ -1,6 +1,6 @@
-PYTHON_VERSION={{cookiecutter.python_version}}
+PYTHON_VERSION={{ cookiecutter.python_version }}
 REQUIREMENTS_TXT:=requirements.txt
-IMAGE={{cookiecutter.project_slug}}
+IMAGE={{ cookiecutter.project_slug }}
 REPORT_DIR=./
 ENV_FILE=.env
 

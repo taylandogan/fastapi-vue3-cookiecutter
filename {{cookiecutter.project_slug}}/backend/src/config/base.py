@@ -13,7 +13,7 @@ version = get_version(repo_root / "REVISION")
 class Settings(BaseSettings):
     ENV: str = "test"
 
-    NAME: str = "{{cookiecutter.project_slug}}"
+    NAME: str = "{{ cookiecutter.project_slug }}"
     VERSION: str = version
     HOST: AnyHttpUrl
     PORT: str = 8000
@@ -31,7 +31,7 @@ class Settings(BaseSettings):
     DATABASE_POOL_RECYCLE_TTL: int = 3600
     DATABASE_POOL_MAX_OVERFLOW: int = 1
 
-    SECRET_KEY: str = "{{cookiecutter.secret_key}}"
+    SECRET_KEY: str = "{{ cookiecutter.secret_key }}"
 
     # 60 minutes * 24 hours * 1 day = 1 day
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 60 * 24 * 1
