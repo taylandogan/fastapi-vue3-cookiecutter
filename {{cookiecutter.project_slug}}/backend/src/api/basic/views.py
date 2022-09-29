@@ -2,8 +2,8 @@ import datetime as dt
 import pathlib
 
 from fastapi import APIRouter
-from utils import get_version, Health, Version
-from config.base import app_settings as settings
+from api.utils import get_version, Health, Version
+from config.base import settings
 
 router = APIRouter()
 

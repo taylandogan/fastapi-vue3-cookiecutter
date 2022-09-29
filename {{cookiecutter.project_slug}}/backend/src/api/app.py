@@ -13,7 +13,7 @@ from starlette.responses import JSONResponse
 from api.v1 import views as v1_views
 from api.utils import ErrorModel
 from api.basic import views as basic_views
-from config.base import app_settings as settings
+from config.base import settings
 
 
 def create_app() -> FastAPI:

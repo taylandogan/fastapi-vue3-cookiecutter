@@ -2,7 +2,7 @@ import logging
 
 import uvicorn
 
-from config.base import app_settings as settings
+from config.base import settings
 
 reload_ignore_files = ["__pycache__", ".pytest_cache", "*.pyc", ".git", "*.tmp"]
 
