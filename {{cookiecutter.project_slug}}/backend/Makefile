@@ -78,7 +78,7 @@ docker/test/unittests:
 ###################
 
 run/webserver: $(VENV_PROD)
-	PYTHONPATH=backend/src venv/bin/python -m api
+	PYTHONPATH=src venv/bin/python -m api
 
 {% if cookiecutter.use_postgres == 'y' -%}
 run/db:
