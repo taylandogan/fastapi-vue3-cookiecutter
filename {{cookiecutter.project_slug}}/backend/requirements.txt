@@ -12,6 +12,7 @@ python-dotenv
 {% if cookiecutter.use_redis == 'y' -%}
 redis
 {%- endif %}
+requests
 {% if cookiecutter.use_postgres == 'y' -%}
 sqlalchemy
 {%- endif %}
